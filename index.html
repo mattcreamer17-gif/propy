@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A read on where AI actually fits in Propy's closing stack</title>
+<meta name="description" content="Saw the $100M facility closed in January and you're already three title-company acquisitions in. A hypothesis on where Agent Avery bends as new workflows arrive." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="#top" class="brand" aria-label="Propy">
+      <img src="logo.svg" alt="" class="brand-mark" width="36" height="36" />
+      <span class="brand-word">Propy</span>
+    </a>
+    <nav class="nav-links" aria-label="Page sections">
+      <a href="#frame">The frame</a>
+      <a href="#case">The case</a>
+      <a href="#paper">The paper</a>
+      <a href="#cta">Book the call</a>
+    </nav>
+    <a class="nav-cta" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">Book 30 min</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Prepared for Propy. Booth 1149.
+        </p>
+        <h1 class="hero-h1">
+          A read on where AI actually fits in <em>Propy's</em> closing stack.
+        </h1>
+        <p class="hero-sub">
+          You closed the $100M facility with Metropolitan Partners in January. Agent Avery is live. California escrow opened the same month. Two title-company acquisitions closed, a third in LOI, roughly $75M of pipeline still active. At that cadence, the question is not whether AI belongs in the title and escrow layer. The question is which parts of each acquired workflow live on Avery, which parts stay in legacy software, and which parts need a human with a license. That is the conversation worth having.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">
+            30 minutes with Matt
+            <span class="btn-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </span>
+          </a>
+          <a class="btn btn-ghost" href="#frame">Read the frame</a>
+        </div>
+
+        <dl class="hero-stats" aria-label="Relevant numbers">
+          <div class="stat">
+            <dt>Acquisition pipeline (public)</dt>
+            <dd><span class="stat-num">$75M</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Credit facility (Jan)</dt>
+            <dd><span class="stat-num">$100M</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Avery's work reduction</dt>
+            <dd><span class="stat-num">40%</span></dd>
+          </div>
+        </dl>
+      </div>
+
+      <aside class="hero-card" aria-label="Meta line">
+        <div class="card-chip">Meta line</div>
+        <p class="card-quote">
+          Each title company you acquire ships with its own rules. Agent Avery needs a context architecture, not a longer prompt, and we have shipped that exact thing for VigilOre.
+        </p>
+        <div class="card-foot">
+          <span class="card-dot"></span>
+          Matt Creamer, CRO, Eduba
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section hypothesis" id="hypothesis" aria-labelledby="hyp-h">
+    <div class="section-head">
+      <span class="section-label">Hypothesis</span>
+      <h2 id="hyp-h" class="section-h2">Three things we think are true right now.</h2>
+    </div>
+    <ol class="hyp-list">
+      <li>
+        <span class="hyp-num">01</span>
+        <h3>Acquired-company integration is eating calendar weeks.</h3>
+        <p>Each shop ships with Qualia, SoftPro, RamQuest, or ResWare, different state formats, and staff trained on local process. Getting Avery to operate on top of all of them without breaking per-state compliance is where the roll-up thesis decides itself.</p>
+      </li>
+      <li>
+        <span class="hyp-num">02</span>
+        <h3>Edge-case handling is where the liability lives.</h3>
+        <p>The 40% reduction means 60% still needs a human, and that 60% is the gnarly work: liens, estate issues, HOA payoff disputes, odd title defects. Avery needs a clean escalation layer with audit trails.</p>
+      </li>
+      <li>
+        <span class="hyp-num">03</span>
+        <h3>Regulatory surface is expanding faster than internal process.</h3>
+        <p>MiCA in the EU. State-by-state US licensing (FL, AZ, CO, now CA). Each jurisdiction adds rules to encode. A formal context layer lets one agent operate across jurisdictions without bespoke retraining.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section frame" id="frame" aria-labelledby="frame-h">
+    <div class="frame-grid">
+      <div class="frame-copy">
+        <span class="section-label">The frame</span>
+        <h2 id="frame-h" class="section-h2">Treat agent context as an architecture, not a prompt.</h2>
+        <p>
+          Most teams building agentic systems pick a model, wrap it in a prompt, and call it a product. That works until a second acquired title company arrives and the prompt has to account for state-specific recording rules, different HOA communication norms, and a different legacy platform. At that point the prompt turns into a 4,000-word document no one wants to touch, and the last engineer who understood it leaves for another startup.
+        </p>
+        <p>
+          Our take: agent context should be layered, versioned, and inspectable. Each layer has its own tools, its own audit trail, and its own escalation path. The orchestration layer is what decides which problem goes where.
+        </p>
+      </div>
+
+      <div class="frame-chart" aria-hidden="true">
+        <div class="chart-ring">
+          <div class="slice slice-60">
+            <span class="slice-label">
+              <strong>60%</strong>
+              <em>Traditional code &amp; database</em>
+              <small>Document extraction, lien checks, payoff calc</small>
+            </span>
+          </div>
+          <div class="slice slice-30">
+            <span class="slice-label">
+              <strong>30%</strong>
+              <em>Rule-based logic</em>
+              <small>State recording rules. CA vs FL vs AZ.</small>
+            </span>
+          </div>
+          <div class="slice slice-10">
+            <span class="slice-label">
+              <strong>10%</strong>
+              <em>Genuine LLM territory</em>
+              <small>Ambiguous defects, novel edge cases</small>
+            </span>
+          </div>
+        </div>
+        <p class="chart-caption">A rough shape of how the work sorts inside an escrow agent.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section case" id="case" aria-labelledby="case-h">
+    <div class="section-head">
+      <span class="section-label">The case</span>
+      <h2 id="case-h" class="section-h2">VigilOre. Same shape of problem. Different industry.</h2>
+    </div>
+    <div class="case-card">
+      <div class="case-card-body">
+        <p class="case-lede">
+          VigilOre runs a multi-agent compliance platform for mining operations in the Democratic Republic of the Congo. Document-heavy, highly regulated, jurisdiction-specific.
+        </p>
+        <p class="case-result">
+          <span class="result-num">160+</span>
+          <span class="result-text">hours of manual compliance work</span>
+          <span class="result-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+          <span class="result-num accent">under 5 min</span>
+        </p>
+        <p class="case-note">
+          Collapsed by organizing the agent context the way we are describing above. Multi-agent architecture, jurisdiction-specific rulesets, document-heavy workflow. Sound familiar?
+        </p>
+      </div>
+      <ul class="case-tags" aria-label="Why this maps">
+        <li>Document-heavy</li>
+        <li>Regulated by jurisdiction</li>
+        <li>Multi-agent</li>
+        <li>Auditable context</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section paper" id="paper" aria-labelledby="paper-h">
+    <div class="paper-grid">
+      <div>
+        <span class="section-label">The paper</span>
+        <h2 id="paper-h" class="section-h2">Interpretable Context Methodology.</h2>
+        <p class="paper-body">
+          The thinking is written up formally as ICM, submitted to ACM TiiS. Agent context organized as a layered filesystem, from L0 identity through L4 working artifacts, with measurable interpretability and reproducibility gains. 52-member practitioner community. MIT licensed.
+        </p>
+        <a class="btn btn-ghost paper-link" href="https://github.com/RinDig/Interpretable-Context-Methodology-ICM-" target="_blank" rel="noopener">
+          github.com/RinDig/Interpretable-Context-Methodology-ICM-
+          <span class="btn-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </a>
+      </div>
+      <div class="paper-meta">
+        <div class="meta-row"><span>Venue</span><strong>ACM TiiS (submitted)</strong></div>
+        <div class="meta-row"><span>License</span><strong>MIT</strong></div>
+        <div class="meta-row"><span>Practitioner community</span><strong>52 members</strong></div>
+        <div class="meta-row"><span>Core idea</span><strong>Folder structure as agent architecture</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ecosystem" aria-labelledby="eco-h">
+    <h2 id="eco-h" class="section-h2 small">Where this sits on the stack.</h2>
+    <p class="eco-note">
+      Eduba leads the orchestration and context architecture work. For anything that sits underneath, Eduba partners with NLP Logix, who have been in machine learning since 2011 and run over 150 data scientists. Discovery stays with us.
+    </p>
+  </section>
+
+  <section class="section cta" id="cta" aria-labelledby="cta-h">
+    <div class="cta-card">
+      <span class="section-label on-dark">Next step</span>
+      <h2 id="cta-h" class="cta-h">30 minutes with Matt.</h2>
+      <p class="cta-sub">
+        Bring the spec for how Agent Avery picks up a new acquired workflow. We will walk through what a formal context architecture would look like for that pickup, using a real example from VigilOre. No deck. No slide on the orchestration framework. Just the spec and the whiteboard.
+      </p>
+      <a class="btn btn-primary btn-large" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">
+        Book the call
+        <span class="btn-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </span>
+      </a>
+      <p class="cta-who">
+        Matt Creamer, CRO, Eduba. <a href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">calendly.com/thecro-eduba/30min</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <p class="prepared">Prepared by Eduba for Propy. <a href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a></p>
+    <p class="footer-note">Booth 1149. All public numbers sourced from Propy press releases and public filings.</p>
+  </div>
+</footer>
+
+</body>
+</html>
